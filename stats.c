@@ -35,8 +35,38 @@ void main() {
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
   /* Other Variable Declarations Go Here */
+  unsigned char minimum = 0;
+  unsigned char maximum = 0;
+  unsigned char mean = 0;
+  unsigned char median = 0;
+  int *p_array;
+  p_array = test;
   /* Statistics and Printing Functions Go Here */
 
 }
 
-/* Add other Implementation File Code Here */
+void print_statistics(unsigned char min, unsigned char max, unsigned char mean,
+unsigned char med,){
+
+}
+
+void print_array(char *arr, unsigned char length){
+
+}
+unsigned char find_median(char *arr, unsigned char length){
+
+}
+unsigned char find_mean(char *arr, unsigned char length){
+
+}
+
+unsigned char find_maximum(char *arr, unsigned char length){
+
+}
+
+unsigned char find_minimum(char *arr, unsigned char length){
+
+}
+void sort_array(char *arr, unsigned char length){
+
+}

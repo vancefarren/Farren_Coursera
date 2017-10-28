@@ -12,10 +12,10 @@
  * @file stats.h 
  * @brief This file contains the function declarations and descriptions
  *
- * <Add Extended Description Here>
+ * 
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Vance Farren
+ * @date 10/27/2017
  *
  */
 #ifndef __STATS_H__
@@ -23,102 +23,87 @@
 
 /* Add Your Declarations and Function Comments here */ 
 
-/**
- * @brief <Add Brief Description of Function Here>
+/**1
+ * @brief A function that prints the statistics of an array including minimum,
+ * maximum, mean, and median.
  *
- * <Add Extended Description Here>
+ * 
+ * @param min The minimum value in the array
+ * @param max The maximum value in the array
+ * @param mean The average value in the array
+ * @param med The middle value in the array
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @return no return value
  */
-/**
- * @brief <Add Brief Description of Function Here>
+void print_statistics(unsigned char min, unsigned char max, unsigned char mean,
+                               unsigned char med);
+
+
+/**2
+ * @brief Given an array of data and a length, prints the array to the screen
  *
- * <Add Extended Description Here>
+ * @param *arr Pointer to the beginning of the test array
+ * @param length Length of the array
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @return no return value
  */
-/**
- * @brief <Add Brief Description of Function Here>
+void print_array(char *arr, unsigned char length);
+
+/**3
+ * @brief This function finds the median value of the array
  *
- * <Add Extended Description Here>
+ * @param *arr Pointer to the beginning of the test array
+ * @param length Length of the array
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
  *
- * @return <Add Return Informaiton here>
+ * @return  Returns the median value of the array
  */
-/**
- * @brief <Add Brief Description of Function Here>
+unsigned char find_median(char *arr, unsigned char length);
+
+/**4
+ * @brief This function finds the mean value of the array
  *
- * <Add Extended Description Here>
+ * @param *arr Pointer to the beginning of the test array
+ * @param length Length of the array
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
  *
- * @return <Add Return Informaiton here>
+ * @return Returns the mean value of the array
  */
-/**
- * @brief <Add Brief Description of Function Here>
+unsigned char find_mean(char *arr, unsigned char length);
+
+/**5
+ * @brief This function finds the maximum value of the array
  *
- * <Add Extended Description Here>
+ * @param *arr Pointer to the beginning of the test array
+ * @param length Length of the array
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
  *
- * @return <Add Return Informaiton here>
+ * @return Returns the maximum value of the array
  */
-/**
- * @brief <Add Brief Description of Function Here>
+unsigned char find_maximum(char *arr, unsigned char length);
+
+/**6
+ * @brief This function finds the minimum value of the array
  *
- * <Add Extended Description Here>
+ * @param *arr Pointer to the beginning of the test array
+ * @param length Length of the array
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
  *
- * @return <Add Return Informaiton here>
+ * @return Returns the minimum value of the array
  */
-/**
- * @brief <Add Brief Description of Function Here>
+unsigned char find_minimum(char *arr, unsigned char length);
+
+/**7
+ * @brief This function sorts the array largest first to smallest
  *
- * <Add Extended Description Here>
+ * @param *arr Pointer to the beginning of the test array
+ * @param length Length of the array
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
  *
- * @return <Add Return Informaiton here>
+ * @return Returns nothing
  */
-/**
- * @brief <Add Brief Description of Function Here>
- *
- * <Add Extended Description Here>
- *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
- */
+void sort_array(char *arr, unsigned char length);
+
 
 
 #endif /* __STATS_H__ */
