@@ -39,34 +39,77 @@ void main() {
   unsigned char maximum = 0;
   unsigned char mean = 0;
   unsigned char median = 0;
-  int *p_array;
+  unsigned char *p_array;
   p_array = test;
   /* Statistics and Printing Functions Go Here */
+printf("The contents of the unsorted array are:\n");
+print_array(test,SIZE);
+sort_array(test,SIZE);
+printf("The contents of the sorted array are:\n");
+print_array(test,SIZE);
+minimum=find_minimum(test,SIZE);
+maximum=find_maximum(test,SIZE);
+mean=find_mean(test,SIZE);
+median=find_median(test,SIZE);
+print_statistics(minimum,maximum,mean,median);
 
 }
 
 void print_statistics(unsigned char min, unsigned char max, unsigned char mean,
-unsigned char med,){
-
+unsigned char med){
+printf("The minimum value of the array is: %u\n",min);
+printf("The maximum value of the array is: %u\n",max);
+printf("The mean value of the array is: %u\n",mean);
+printf("The median value of the array is: %u\n",med);
 }
 
-void print_array(char *arr, unsigned char length){
+void print_array(unsigned char *arr, unsigned int length){
 
+  for(int i = 0; i< length; i++){
+    printf("%u, ",arr[i]); 
+  }
+  printf("\n");
 }
-unsigned char find_median(char *arr, unsigned char length){
-
+unsigned char find_median(unsigned char *arr, unsigned int length){
+  unsigned char median = 0;
+  median = (arr[length/2] + arr[length/2-1])/2;
+  return median;
 }
-unsigned char find_mean(char *arr, unsigned char length){
-
+unsigned char find_mean(unsigned char *arr, unsigned int length){
+  int mean = 0;
+  unsigned char mean_return = 0;
+  for(unsigned char i = 0; i<length; i++){
+    mean = mean + arr[i];
+  }
+  mean = mean/length;
+  mean_return = mean;
+  return mean_return;
 }
 
-unsigned char find_maximum(char *arr, unsigned char length){
-
+unsigned char find_maximum(unsigned char *arr, unsigned int length){
+  unsigned char max = arr[0];
+  for(unsigned char i = 0; i<length; i++)if (max < arr[i])max=arr[i];
+  return max;
 }
 
-unsigned char find_minimum(char *arr, unsigned char length){
-
+unsigned char find_minimum(unsigned char *arr, unsigned int length){
+  unsigned char min = arr[0];
+  for(unsigned char i = 0; i<length; i++)if (min > arr[i])min=arr[i];
+  return min;
 }
-void sort_array(char *arr, unsigned char length){
 
+void sort_array(unsigned char *arr, unsigned int length){
+  char swapped = 1;
+  unsigned char swap = 0;
+  while(swapped == 1){
+    swapped = 0;
+    for(unsigned char j =0; j<length; j++){
+      if(arr[j] < arr[j+1]){
+        swap = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = swap;
+        swapped = 1;
+      }
+    }
+  }
 }
